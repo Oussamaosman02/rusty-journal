@@ -1,7 +1,7 @@
 use chrono::{serde::ts_seconds, DateTime, Local, Utc};
 use serde::Deserialize;
 use serde::Serialize;
-
+use colored::*;
 use std::fmt;
 use std::fs::{File, OpenOptions};
 use std::io::{Error, ErrorKind, Result, Seek, SeekFrom};
@@ -24,7 +24,7 @@ impl Task {
 impl fmt::Display for Task {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let created_at = self.created_at.with_timezone(&Local).format("%F %H:%M");
-        write!(f, "{:<50} [{}]", self.text, created_at)
+        write!(f, "{:<50} [{}]", self.text.green(), created_at)
     }
 }
 
@@ -82,7 +82,7 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
     let tasks = collect_tasks(&file)?;
 
     if tasks.is_empty() {
-        println!("Tasks list is empty!");
+        println!("{}","Tasks list is empty!".cyan());
     } else {
         let mut order: u32 = 1;
         for task in tasks {
