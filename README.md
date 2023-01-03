@@ -26,10 +26,16 @@ Solo tiene que asegurarse de que su directorio aparezca en la variable de entorn
 
 ### v0.1
 
-![Funcionamiento de la version 0.1](./assets/one.png)
+![Funcionamiento de la versión 0.1](./assets/one.png)
 
 ### v0.2
 
 > Se añaden algunos colores
 
-![Funcionamiento de la version 0.2](./assets/two.png)
+![Funcionamiento de la versión 0.2](./assets/two.png)
+
+### v0.3
+
+> Se añaden mensajes de confirmación
+
+![FUncionamiento de la versión 0.3](./assets/three.png)

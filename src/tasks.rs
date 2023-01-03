@@ -53,7 +53,9 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
     file.seek(SeekFrom::Start(0))?;
     tasks.push(task);
     serde_json::to_writer(file, &tasks)?;
-
+    
+    println!("{}", "Task added successfully!".green());
+    
     Ok(())
 }
 
@@ -73,6 +75,9 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
     file.set_len(0)?;
 
     serde_json::to_writer(file, &tasks)?;
+
+    println!("{}", "Task completed, well done!".green());
+
     Ok(())
 }
 
