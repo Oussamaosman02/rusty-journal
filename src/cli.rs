@@ -3,14 +3,17 @@ use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
 pub enum Action {
+    /// Add a task -> rusty-journal add "Task"
     Add {
         #[structopt()]
         text: String,
     },
+    /// Delete a task with id -> rusty-journal done 2
     Done {
         #[structopt()]
         position: usize,
     },
+    /// List all pending tasks -> rusty-journal list
     List,
 }
 

@@ -39,3 +39,9 @@ Solo tiene que asegurarse de que su directorio aparezca en la variable de entorn
 > Se añaden mensajes de confirmación
 
 ![FUncionamiento de la versión 0.3](./assets/three.png)
+
+### v0.4
+
+> Se añaden ayudas más descriptivas
+
+![FUncionamiento de la versión 0.4](./assets/four.png)
